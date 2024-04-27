@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F56AA3F12BDCF2CB00BEBE6C /* DaVinci in Frameworks */ = {isa = PBXBuildFile; productRef = F56AA3F02BDCF2CB00BEBE6C /* DaVinci */; };
+		F5BA145D2BDBB03B002DD1B1 /* sevchat_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA145C2BDBB03B002DD1B1 /* sevchat_appApp.swift */; };
+		F5BA145F2BDBB03B002DD1B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA145E2BDBB03B002DD1B1 /* ContentView.swift */; };
+		F5BA14612BDBB03C002DD1B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BA14602BDBB03C002DD1B1 /* Assets.xcassets */; };
+		F5BA14642BDBB03C002DD1B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BA14632BDBB03C002DD1B1 /* Preview Assets.xcassets */; };
+		F5BA146E2BDBB03D002DD1B1 /* sevchat_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA146D2BDBB03D002DD1B1 /* sevchat_appTests.swift */; };
+		F5BA14782BDBB03D002DD1B1 /* sevchat_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA14772BDBB03D002DD1B1 /* sevchat_appUITests.swift */; };
+		F5BA147A2BDBB03D002DD1B1 /* sevchat_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA14792BDBB03D002DD1B1 /* sevchat_appUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5BA146A2BDBB03D002DD1B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5BA14512BDBB03B002DD1B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5BA14582BDBB03B002DD1B1;
+			remoteInfo = "sevchat-app";
+		};
+		F5BA14742BDBB03D002DD1B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5BA14512BDBB03B002DD1B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5BA14582BDBB03B002DD1B1;
+			remoteInfo = "sevchat-app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5191F8F2BDC53CA00FFFFB9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F5BA14592BDBB03B002DD1B1 /* sevchat-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sevchat-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5BA145C2BDBB03B002DD1B1 /* sevchat_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sevchat_appApp.swift; sourceTree = "<group>"; };
+		F5BA145E2BDBB03B002DD1B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F5BA14602BDBB03C002DD1B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5BA14632BDBB03C002DD1B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5BA14692BDBB03D002DD1B1 /* sevchat-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sevchat-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5BA146D2BDBB03D002DD1B1 /* sevchat_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sevchat_appTests.swift; sourceTree = "<group>"; };
+		F5BA14732BDBB03D002DD1B1 /* sevchat-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sevchat-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5BA14772BDBB03D002DD1B1 /* sevchat_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sevchat_appUITests.swift; sourceTree = "<group>"; };
+		F5BA14792BDBB03D002DD1B1 /* sevchat_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sevchat_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5BA14562BDBB03B002DD1B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F56AA3F12BDCF2CB00BEBE6C /* DaVinci in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5BA14662BDBB03D002DD1B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5BA14702BDBB03D002DD1B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5191F8B2BDC53CA00FFFFB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5BA14502BDBB03B002DD1B1 = {
+			isa = PBXGroup;
+			children = (
+				F5BA145B2BDBB03B002DD1B1 /* sevchat-app */,
+				F5BA146C2BDBB03D002DD1B1 /* sevchat-appTests */,
+				F5BA14762BDBB03D002DD1B1 /* sevchat-appUITests */,
+				F5BA145A2BDBB03B002DD1B1 /* Products */,
+				F5191F8B2BDC53CA00FFFFB9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F5BA145A2BDBB03B002DD1B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA14592BDBB03B002DD1B1 /* sevchat-app.app */,
+				F5BA14692BDBB03D002DD1B1 /* sevchat-appTests.xctest */,
+				F5BA14732BDBB03D002DD1B1 /* sevchat-appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5BA145B2BDBB03B002DD1B1 /* sevchat-app */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA145C2BDBB03B002DD1B1 /* sevchat_appApp.swift */,
+				F5BA145E2BDBB03B002DD1B1 /* ContentView.swift */,
+				F5BA14602BDBB03C002DD1B1 /* Assets.xcassets */,
+				F5BA14622BDBB03C002DD1B1 /* Preview Content */,
+			);
+			path = "sevchat-app";
+			sourceTree = "<group>";
+		};
+		F5BA14622BDBB03C002DD1B1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA14632BDBB03C002DD1B1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5BA146C2BDBB03D002DD1B1 /* sevchat-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA146D2BDBB03D002DD1B1 /* sevchat_appTests.swift */,
+			);
+			path = "sevchat-appTests";
+			sourceTree = "<group>";
+		};
+		F5BA14762BDBB03D002DD1B1 /* sevchat-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA14772BDBB03D002DD1B1 /* sevchat_appUITests.swift */,
+				F5BA14792BDBB03D002DD1B1 /* sevchat_appUITestsLaunchTests.swift */,
+			);
+			path = "sevchat-appUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5BA14582BDBB03B002DD1B1 /* sevchat-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5BA147D2BDBB03D002DD1B1 /* Build configuration list for PBXNativeTarget "sevchat-app" */;
+			buildPhases = (
+				F5BA14552BDBB03B002DD1B1 /* Sources */,
+				F5BA14562BDBB03B002DD1B1 /* Frameworks */,
+				F5BA14572BDBB03B002DD1B1 /* Resources */,
+				F5191F8F2BDC53CA00FFFFB9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sevchat-app";
+			packageProductDependencies = (
+				F56AA3F02BDCF2CB00BEBE6C /* DaVinci */,
+			);
+			productName = "sevchat-app";
+			productReference = F5BA14592BDBB03B002DD1B1 /* sevchat-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5BA14682BDBB03D002DD1B1 /* sevchat-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5BA14802BDBB03D002DD1B1 /* Build configuration list for PBXNativeTarget "sevchat-appTests" */;
+			buildPhases = (
+				F5BA14652BDBB03D002DD1B1 /* Sources */,
+				F5BA14662BDBB03D002DD1B1 /* Frameworks */,
+				F5BA14672BDBB03D002DD1B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5BA146B2BDBB03D002DD1B1 /* PBXTargetDependency */,
+			);
+			name = "sevchat-appTests";
+			productName = "sevchat-appTests";
+			productReference = F5BA14692BDBB03D002DD1B1 /* sevchat-appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5BA14722BDBB03D002DD1B1 /* sevchat-appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5BA14832BDBB03D002DD1B1 /* Build configuration list for PBXNativeTarget "sevchat-appUITests" */;
+			buildPhases = (
+				F5BA146F2BDBB03D002DD1B1 /* Sources */,
+				F5BA14702BDBB03D002DD1B1 /* Frameworks */,
+				F5BA14712BDBB03D002DD1B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5BA14752BDBB03D002DD1B1 /* PBXTargetDependency */,
+			);
+			name = "sevchat-appUITests";
+			productName = "sevchat-appUITests";
+			productReference = F5BA14732BDBB03D002DD1B1 /* sevchat-appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5BA14512BDBB03B002DD1B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					F5BA14582BDBB03B002DD1B1 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					F5BA14682BDBB03D002DD1B1 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = F5BA14582BDBB03B002DD1B1;
+					};
+					F5BA14722BDBB03D002DD1B1 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = F5BA14582BDBB03B002DD1B1;
+					};
+				};
+			};
+			buildConfigurationList = F5BA14542BDBB03B002DD1B1 /* Build configuration list for PBXProject "sevchat-app" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5BA14502BDBB03B002DD1B1;
+			packageReferences = (
+				F581DBCF2BDC6239001526D3 /* XCLocalSwiftPackageReference "../sevchat-core" */,
+			);
+			productRefGroup = F5BA145A2BDBB03B002DD1B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5BA14582BDBB03B002DD1B1 /* sevchat-app */,
+				F5BA14682BDBB03D002DD1B1 /* sevchat-appTests */,
+				F5BA14722BDBB03D002DD1B1 /* sevchat-appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5BA14572BDBB03B002DD1B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BA14642BDBB03C002DD1B1 /* Preview Assets.xcassets in Resources */,
+				F5BA14612BDBB03C002DD1B1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5BA14672BDBB03D002DD1B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5BA14712BDBB03D002DD1B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5BA14552BDBB03B002DD1B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BA145F2BDBB03B002DD1B1 /* ContentView.swift in Sources */,
+				F5BA145D2BDBB03B002DD1B1 /* sevchat_appApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5BA14652BDBB03D002DD1B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BA146E2BDBB03D002DD1B1 /* sevchat_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5BA146F2BDBB03D002DD1B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BA14782BDBB03D002DD1B1 /* sevchat_appUITests.swift in Sources */,
+				F5BA147A2BDBB03D002DD1B1 /* sevchat_appUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5BA146B2BDBB03D002DD1B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5BA14582BDBB03B002DD1B1 /* sevchat-app */;
+			targetProxy = F5BA146A2BDBB03D002DD1B1 /* PBXContainerItemProxy */;
+		};
+		F5BA14752BDBB03D002DD1B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5BA14582BDBB03B002DD1B1 /* sevchat-app */;
+			targetProxy = F5BA14742BDBB03D002DD1B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F5BA147B2BDBB03D002DD1B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5BA147C2BDBB03D002DD1B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5BA147E2BDBB03D002DD1B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sevchat-app/Preview Content\"";
+				DEVELOPMENT_TEAM = W6PRG52CXX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ChatIS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.chatis.sevchat-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5BA147F2BDBB03D002DD1B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sevchat-app/Preview Content\"";
+				DEVELOPMENT_TEAM = W6PRG52CXX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ChatIS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.chatis.sevchat-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5BA14812BDBB03D002DD1B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6PRG52CXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.chatis.sevchat-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sevchat-app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sevchat-app";
+			};
+			name = Debug;
+		};
+		F5BA14822BDBB03D002DD1B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6PRG52CXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.chatis.sevchat-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sevchat-app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sevchat-app";
+			};
+			name = Release;
+		};
+		F5BA14842BDBB03D002DD1B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6PRG52CXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.chatis.sevchat-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "sevchat-app";
+			};
+			name = Debug;
+		};
+		F5BA14852BDBB03D002DD1B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6PRG52CXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.chatis.sevchat-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "sevchat-app";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5BA14542BDBB03B002DD1B1 /* Build configuration list for PBXProject "sevchat-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5BA147B2BDBB03D002DD1B1 /* Debug */,
+				F5BA147C2BDBB03D002DD1B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5BA147D2BDBB03D002DD1B1 /* Build configuration list for PBXNativeTarget "sevchat-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5BA147E2BDBB03D002DD1B1 /* Debug */,
+				F5BA147F2BDBB03D002DD1B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5BA14802BDBB03D002DD1B1 /* Build configuration list for PBXNativeTarget "sevchat-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5BA14812BDBB03D002DD1B1 /* Debug */,
+				F5BA14822BDBB03D002DD1B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5BA14832BDBB03D002DD1B1 /* Build configuration list for PBXNativeTarget "sevchat-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5BA14842BDBB03D002DD1B1 /* Debug */,
+				F5BA14852BDBB03D002DD1B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		F581DBCF2BDC6239001526D3 /* XCLocalSwiftPackageReference "../sevchat-core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../sevchat-core";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F56AA3F02BDCF2CB00BEBE6C /* DaVinci */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DaVinci;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F5BA14512BDBB03B002DD1B1 /* Project object */;
+}
