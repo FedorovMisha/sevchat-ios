@@ -1,0 +1,14 @@
+input_dir: ./
+
+xcassets:
+  - inputs:
+      - Colors.xcassets
+    outputs:
+      - templatePath: Templates/Colors.stencil
+        output: ${DERIVED_SOURCES_DIR}/Colors.swift
+  - inputs:
+      - Images.xcassets
+    outputs:
+      - templatePath: Templates/Image.stencil
+        output: ${DERIVED_SOURCES_DIR}/Images.swift
+
