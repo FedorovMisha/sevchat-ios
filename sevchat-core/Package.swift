@@ -51,7 +51,8 @@ let package = Package(
             name: "NetSpark",
             dependencies: [
                 "Moya",
-                "SwiftyBeaver"
+                "SwiftyBeaver",
+                "APIModelKit"
             ]
         ),
         .testTarget(

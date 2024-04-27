@@ -10,6 +10,16 @@
    <FileRef
       location = "group:sevchat-features">
    </FileRef>
+   <Group
+      location = "group:Configuration"
+      name = "Configuration">
+      <FileRef
+         location = "group:Base.xcconfig">
+      </FileRef>
+      <FileRef
+         location = "group:Personal.xcconfig">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:README.md">
    </FileRef>

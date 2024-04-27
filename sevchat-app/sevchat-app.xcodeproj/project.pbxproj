@@ -48,6 +48,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F5AD633C2BE17CAE00EE666A /* SevChat.Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SevChat.Development.xcconfig; sourceTree = "<group>"; };
+		F5AD633D2BE17CB700EE666A /* SevChat.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SevChat.Release.xcconfig; sourceTree = "<group>"; };
+		F5AD633E2BE17EA500EE666A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F5BA14592BDBB03B002DD1B1 /* sevchat-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sevchat-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BA145C2BDBB03B002DD1B1 /* sevchat_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sevchat_appApp.swift; sourceTree = "<group>"; };
 		F5BA145E2BDBB03B002DD1B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,9 +96,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F5AD633B2BE17C9A00EE666A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F5AD633C2BE17CAE00EE666A /* SevChat.Development.xcconfig */,
+				F5AD633D2BE17CB700EE666A /* SevChat.Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		F5BA14502BDBB03B002DD1B1 = {
 			isa = PBXGroup;
 			children = (
+				F5AD633B2BE17C9A00EE666A /* Configuration */,
 				F5BA145B2BDBB03B002DD1B1 /* sevchat-app */,
 				F5BA146C2BDBB03D002DD1B1 /* sevchat-appTests */,
 				F5BA14762BDBB03D002DD1B1 /* sevchat-appUITests */,
@@ -117,6 +130,7 @@
 		F5BA145B2BDBB03B002DD1B1 /* sevchat-app */ = {
 			isa = PBXGroup;
 			children = (
+				F5AD633E2BE17EA500EE666A /* Info.plist */,
 				F5BA145C2BDBB03B002DD1B1 /* sevchat_appApp.swift */,
 				F5BA145E2BDBB03B002DD1B1 /* ContentView.swift */,
 				F5BA14602BDBB03C002DD1B1 /* Assets.xcassets */,
@@ -327,6 +341,7 @@
 /* Begin XCBuildConfiguration section */
 		F5BA147B2BDBB03D002DD1B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AD633C2BE17CAE00EE666A /* SevChat.Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -390,6 +405,7 @@
 		};
 		F5BA147C2BDBB03D002DD1B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AD633D2BE17CB700EE666A /* SevChat.Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -446,6 +462,7 @@
 		};
 		F5BA147E2BDBB03D002DD1B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AD633C2BE17CAE00EE666A /* SevChat.Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +472,7 @@
 				DEVELOPMENT_TEAM = W6PRG52CXX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "sevchat-app/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ChatIS;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -481,6 +499,7 @@
 		};
 		F5BA147F2BDBB03D002DD1B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AD633D2BE17CB700EE666A /* SevChat.Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +509,7 @@
 				DEVELOPMENT_TEAM = W6PRG52CXX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "sevchat-app/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ChatIS;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -516,6 +536,7 @@
 		};
 		F5BA14812BDBB03D002DD1B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AD633C2BE17CAE00EE666A /* SevChat.Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +557,7 @@
 		};
 		F5BA14822BDBB03D002DD1B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AD633D2BE17CB700EE666A /* SevChat.Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -556,6 +578,7 @@
 		};
 		F5BA14842BDBB03D002DD1B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AD633C2BE17CAE00EE666A /* SevChat.Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -574,6 +597,7 @@
 		};
 		F5BA14852BDBB03D002DD1B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AD633D2BE17CB700EE666A /* SevChat.Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

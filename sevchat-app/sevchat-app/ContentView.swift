@@ -17,6 +17,10 @@ struct ContentView: View {
 
         }
         .padding()
+        .onAppear {
+            let b = Bundle.main.infoDictionary?["BASE_URL"]
+            print(b)
+        }
     }
 }
 
