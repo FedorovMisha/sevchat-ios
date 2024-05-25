@@ -7,14 +7,20 @@ let package = Package(
     platforms: [.iOS(.v16)],
     products: [
         .library(
-            name: "sevchat-features",
-            targets: ["sevchat-features"]),
+            name: "Authentication",
+            targets: ["Authentication"]),
+    ],
+    dependencies: [
+//        .package(name: "sevchat-core", path: "../sevchat-core")
+        .package(path: "../sevchat-core/")
     ],
     targets: [
         .target(
-            name: "sevchat-features"),
-        .testTarget(
-            name: "sevchat-featuresTests",
-            dependencies: ["sevchat-features"]),
+            name: "Authentication",
+            dependencies: [
+                .product(name: "DaVinci", package: "sevchat-core"),
+                .product(name: "Aesthetic", package: "sevchat-core")
+            ]
+        )
     ]
 )

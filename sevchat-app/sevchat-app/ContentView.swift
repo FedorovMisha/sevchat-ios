@@ -7,20 +7,14 @@
 
 import SwiftUI
 import DaVinci
+import Authentication
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-            Text("Hello, world!")
+            AuthenticationRoot()
+        }
 
-        }
-        .padding()
-        .onAppear {
-            let b = Bundle.main.infoDictionary?["BASE_URL"]
-            print(b)
-        }
     }
 }
 

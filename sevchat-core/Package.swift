@@ -79,7 +79,8 @@ let package = Package(
             name: "Aesthetic",
             dependencies: [
                 "Nuke",
-                "SwiftyBeaver"
+                "SwiftyBeaver",
+                "DaVinci"
             ]
         ),
         .target(

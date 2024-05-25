@@ -15,6 +15,7 @@
 		F5BA146E2BDBB03D002DD1B1 /* sevchat_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA146D2BDBB03D002DD1B1 /* sevchat_appTests.swift */; };
 		F5BA14782BDBB03D002DD1B1 /* sevchat_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA14772BDBB03D002DD1B1 /* sevchat_appUITests.swift */; };
 		F5BA147A2BDBB03D002DD1B1 /* sevchat_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA14792BDBB03D002DD1B1 /* sevchat_appUITestsLaunchTests.swift */; };
+		F5F78F252C02894400550D60 /* Authentication in Frameworks */ = {isa = PBXBuildFile; productRef = F5F78F242C02894400550D60 /* Authentication */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F78F252C02894400550D60 /* Authentication in Frameworks */,
 				F56AA3F12BDCF2CB00BEBE6C /* DaVinci in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +185,7 @@
 			name = "sevchat-app";
 			packageProductDependencies = (
 				F56AA3F02BDCF2CB00BEBE6C /* DaVinci */,
+				F5F78F242C02894400550D60 /* Authentication */,
 			);
 			productName = "sevchat-app";
 			productReference = F5BA14592BDBB03B002DD1B1 /* sevchat-app.app */;
@@ -493,7 +496,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -530,7 +533,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -666,6 +669,10 @@
 		F56AA3F02BDCF2CB00BEBE6C /* DaVinci */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DaVinci;
+		};
+		F5F78F242C02894400550D60 /* Authentication */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Authentication;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
