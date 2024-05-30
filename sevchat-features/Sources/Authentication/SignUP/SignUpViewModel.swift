@@ -3,8 +3,11 @@
 //  Copyright © 2024 SevChatIS. All rights reserved.
 
 import SwiftUI
+import NetSpark
+import Moya
 
-final class SignUpViewModel: ObservableObject {
+
+final class SignUpViewModel: ObservableObject, AlertHandling {
 
     @Published
     var username: String
@@ -20,11 +23,14 @@ final class SignUpViewModel: ObservableObject {
 
     @Published
     var error: String?
+    
+    @Published
+    var alertState = AlertState()
 
     var isDisabledSignInButton: Bool {
         username.isEmpty || confirmPassword.isEmpty || email.isEmpty || password.isEmpty
     }
-
+    
     public init() {
         self.email = ""
         self.password = ""
@@ -48,7 +54,19 @@ final class SignUpViewModel: ObservableObject {
     }
 
     public func onSignInTap() {
-        // TODO: отправить запрос на сервер
-        // Обновить данные в auth manager
+        MoyaProvider<AuthenticationService>()
+            .request(.signUp(self)) { result in
+            switch result {
+            case let .success(response):
+                debugData(response.data)
+            case let .failure(error):
+                self.alertState = AlertState(isPresented: true, localizedError: error)
+            }
+        }
     }
+}
+
+
+func debugData(_ data: Data)  {
+    print(try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed))
 }

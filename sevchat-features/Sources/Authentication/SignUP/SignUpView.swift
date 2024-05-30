@@ -59,6 +59,10 @@ public struct SignUpView: View {
                 type: .secure
             )
         }
+        .alert(viewModel: viewModel)
+//        .alert(isPresented: $viewModel.alertState.isPresented, error: viewModel.alertState.localizedError) {
+//            Button("Ok", role: .cancel, action: {})
+//        }
     }
 
     private var footerView: some View {

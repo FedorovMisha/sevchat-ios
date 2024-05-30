@@ -8,7 +8,6 @@ import Moya
 
 public protocol NetTarget: TargetType {
 
-    
 }
 
 extension NetTarget {

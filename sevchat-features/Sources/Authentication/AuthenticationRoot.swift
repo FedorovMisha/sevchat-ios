@@ -12,7 +12,7 @@ public struct AuthenticationRoot: View {
 
     public var body: some View {
         NavigationStack(path: $navigation.views) {
-            SignInView()
+            SignUpView()
                 .sheet(item: $navigation.sheet) { value in
                     switch value {
                     case .signUp:

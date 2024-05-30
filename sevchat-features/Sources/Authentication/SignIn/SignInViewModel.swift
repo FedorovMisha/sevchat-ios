@@ -3,14 +3,18 @@
 //  Copyright © 2024 SevChatIS. All rights reserved.
     
 import SwiftUI
+import Moya
 
-final class SignInViewModel: ObservableObject {
+final class SignInViewModel: ObservableObject, AlertHandling {
 
     @Published
     var email: String
 
     @Published
     var password: String
+    
+    @Published
+    var alertState = AlertState()
 
     @Published
     var error: String?
@@ -32,7 +36,15 @@ final class SignInViewModel: ObservableObject {
     }
 
     public func onSignInTap() {
-        // TODO: отправить запрос на сервер
-        // Обновить данные в auth manager
+       
+        MoyaProvider<AuthenticationService>()
+            .request(.login(self)) { result in
+            switch result {
+            case let .success(response):
+                debugData(response.data)
+            case let .failure(error):
+                self.alertState = AlertState(isPresented: true, localizedError: error)
+            }
+        }
     }
 }
