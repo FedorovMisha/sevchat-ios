@@ -11,6 +11,9 @@ public struct SignUpView: View {
     @StateObject
     private var viewModel = SignUpViewModel()
 
+    @Environment(\.dismiss)
+    private var dismiss
+
     public var body: some View {
         VStack {
             Image.chatIS
@@ -58,6 +61,11 @@ public struct SignUpView: View {
                 placeholder: "Повторите пароль",
                 type: .secure
             )
+        }
+        .onChange(of: viewModel.signUpCompleted) { newValue in
+            if newValue {
+                dismiss()
+            }
         }
     }
 

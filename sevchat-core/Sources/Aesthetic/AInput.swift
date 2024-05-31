@@ -20,7 +20,9 @@ public struct AInput: View {
 
     private let placeholder: String?
     private let icon: Image?
+    private let right: AnyView?
     private let type: InputType
+    private let isEditable: Bool
     private let error: String?
 
     public var body: some View {
@@ -63,11 +65,19 @@ public struct AInput: View {
                 .font(.inputValueFont)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
-                .padding(.trailing, 22.0)
+                .padding(.trailing, icon == nil ? 22.0 : 12.0)
                 .padding(.leading, icon == nil ? 16.0 : 12.0)
                 .padding(.vertical, 14.0)
                 .focused($isFocused)
+                .allowsHitTesting(isEditable)
+
+            right?
+                .padding(.trailing, 16.0)
         }
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .fill(.white)
+        )
         .background {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(
@@ -87,15 +97,19 @@ public struct AInput: View {
     public init(
         value: Binding<String>,
         icon: Image? = nil,
+        right: AnyView? = nil,
         placeholder: String? = nil,
         type: InputType = .text,
-        error: String? = nil
+        error: String? = nil,
+        isEditable: Bool = true
     ) {
         self._value = value
         self.icon = icon
         self.placeholder = placeholder
         self.type = type
+        self.right = right
         self.error = error
+        self.isEditable = isEditable
     }
 }
 

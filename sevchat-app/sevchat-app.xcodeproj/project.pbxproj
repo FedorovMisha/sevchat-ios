@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B132A5B2C0A5E1B00FEB1AA /* Main in Frameworks */ = {isa = PBXBuildFile; productRef = 4B132A5A2C0A5E1B00FEB1AA /* Main */; };
+		4BF639832C0A0A2C007030FD /* NetSpark in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF639822C0A0A2C007030FD /* NetSpark */; };
 		F56AA3F12BDCF2CB00BEBE6C /* DaVinci in Frameworks */ = {isa = PBXBuildFile; productRef = F56AA3F02BDCF2CB00BEBE6C /* DaVinci */; };
 		F5BA145D2BDBB03B002DD1B1 /* sevchat_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA145C2BDBB03B002DD1B1 /* sevchat_appApp.swift */; };
 		F5BA145F2BDBB03B002DD1B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA145E2BDBB03B002DD1B1 /* ContentView.swift */; };
@@ -15,7 +17,6 @@
 		F5BA146E2BDBB03D002DD1B1 /* sevchat_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA146D2BDBB03D002DD1B1 /* sevchat_appTests.swift */; };
 		F5BA14782BDBB03D002DD1B1 /* sevchat_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA14772BDBB03D002DD1B1 /* sevchat_appUITests.swift */; };
 		F5BA147A2BDBB03D002DD1B1 /* sevchat_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA14792BDBB03D002DD1B1 /* sevchat_appUITestsLaunchTests.swift */; };
-		F5F78F252C02894400550D60 /* Authentication in Frameworks */ = {isa = PBXBuildFile; productRef = F5F78F242C02894400550D60 /* Authentication */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F78F252C02894400550D60 /* Authentication in Frameworks */,
+				4BF639832C0A0A2C007030FD /* NetSpark in Frameworks */,
 				F56AA3F12BDCF2CB00BEBE6C /* DaVinci in Frameworks */,
+				4B132A5B2C0A5E1B00FEB1AA /* Main in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +187,8 @@
 			name = "sevchat-app";
 			packageProductDependencies = (
 				F56AA3F02BDCF2CB00BEBE6C /* DaVinci */,
-				F5F78F242C02894400550D60 /* Authentication */,
+				4BF639822C0A0A2C007030FD /* NetSpark */,
+				4B132A5A2C0A5E1B00FEB1AA /* Main */,
 			);
 			productName = "sevchat-app";
 			productReference = F5BA14592BDBB03B002DD1B1 /* sevchat-app.app */;
@@ -472,7 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sevchat-app/Preview Content\"";
-				DEVELOPMENT_TEAM = W6PRG52CXX;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "sevchat-app/Info.plist";
@@ -509,7 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sevchat-app/Preview Content\"";
-				DEVELOPMENT_TEAM = W6PRG52CXX;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "sevchat-app/Info.plist";
@@ -666,13 +669,17 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4B132A5A2C0A5E1B00FEB1AA /* Main */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Main;
+		};
+		4BF639822C0A0A2C007030FD /* NetSpark */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetSpark;
+		};
 		F56AA3F02BDCF2CB00BEBE6C /* DaVinci */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DaVinci;
-		};
-		F5F78F242C02894400550D60 /* Authentication */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Authentication;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

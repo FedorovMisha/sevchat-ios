@@ -2,6 +2,8 @@
 //  Created by frvmi on 2024.
 //  Copyright © 2024 SevChatIS. All rights reserved.
 
+import APIModelKit
+import NetSpark
 import SwiftUI
 
 final class SignUpViewModel: ObservableObject {
@@ -20,6 +22,9 @@ final class SignUpViewModel: ObservableObject {
 
     @Published
     var error: String?
+
+    @Published
+    var signUpCompleted = false
 
     var isDisabledSignInButton: Bool {
         username.isEmpty || confirmPassword.isEmpty || email.isEmpty || password.isEmpty
@@ -48,7 +53,20 @@ final class SignUpViewModel: ObservableObject {
     }
 
     public func onSignInTap() {
-        // TODO: отправить запрос на сервер
-        // Обновить данные в auth manager
+        let model = SignUpRequestModel(
+            username: username,
+            password: password,
+            email: email,
+            fullname: username
+        )
+        BaseRequest(NetAuthService.signUp(model)) { (result: Result<SignUpResponseModel, Error>) in
+            switch result {
+            case .success(_):
+                self.signUpCompleted = true
+            case .failure(let failure):
+                print(failure)
+                self.signUpCompleted = false
+            }
+        }
     }
 }

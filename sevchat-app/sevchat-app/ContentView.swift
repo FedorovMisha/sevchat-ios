@@ -7,14 +7,14 @@
 
 import SwiftUI
 import DaVinci
-import Authentication
+import Main
+import NetSpark
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            AuthenticationRoot()
+            MainEntryPoint()
         }
-
     }
 }
 

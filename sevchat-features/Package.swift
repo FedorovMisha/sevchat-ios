@@ -1,4 +1,4 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 5.9
 
 import PackageDescription
 
@@ -9,6 +9,9 @@ let package = Package(
         .library(
             name: "Authentication",
             targets: ["Authentication"]),
+        .library(
+            name: "Main",
+            targets: ["Main"]),
     ],
     dependencies: [
 //        .package(name: "sevchat-core", path: "../sevchat-core")
@@ -19,7 +22,17 @@ let package = Package(
             name: "Authentication",
             dependencies: [
                 .product(name: "DaVinci", package: "sevchat-core"),
-                .product(name: "Aesthetic", package: "sevchat-core")
+                .product(name: "Aesthetic", package: "sevchat-core"),
+                .product(name: "NetSpark", package: "sevchat-core"),
+            ]
+        ),
+        .target(
+            name: "Main",
+            dependencies: [
+                .product(name: "DaVinci", package: "sevchat-core"),
+                .product(name: "Aesthetic", package: "sevchat-core"),
+                .product(name: "NetSpark", package: "sevchat-core"),
+                "Authentication"
             ]
         )
     ]
