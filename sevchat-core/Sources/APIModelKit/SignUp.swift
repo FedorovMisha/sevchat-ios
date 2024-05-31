@@ -17,7 +17,7 @@ public struct SignUpRequestModel: Codable {
     public let username: String
     public let password: String
     public let email: String
-    public let fullname: String
+    public let fullName: String
 
     public init(
         username: String,
@@ -28,7 +28,7 @@ public struct SignUpRequestModel: Codable {
         self.username = username
         self.password = password
         self.email = email
-        self.fullname = fullname
+        self.fullName = fullname
     }
 }
 

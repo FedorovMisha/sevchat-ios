@@ -75,18 +75,42 @@ public struct UserProfileView: View {
             userName: user.fullName,
             status: "В сети"
         ) {
-            VStack(spacing: 8) {
-                AInput(value: .constant(user.fullName), icon: .profile)
-                AInput(value: .constant(user.email), icon: .mail)
-
-                AButton(title: "Изменить") {
-
-                }
-                .shadow(color: .black.opacity(0.05), radius: 50, y: 26)
-            }
+            editableContent(user)
         }
     }
 
+    private func editableContent(_ user: User) -> some View {
+        VStack(spacing: 8) {
+            AInput(
+                value: .constant(user.fullName),
+                icon: .profile,
+                right: AnyView(
+                    Image.solarCopyOutline
+                        .onTapGesture {
+                            UIPasteboard.general.string = user.fullName
+                        }
+                ),
+                isEditable: false
+            )
+
+            AInput(
+                value: .constant(user.email),
+                icon: .mail,
+                right: AnyView(
+                    Image.solarCopyOutline
+                        .onTapGesture {
+                            UIPasteboard.general.string = user.fullName
+                        }
+                ),
+                isEditable: false
+            )
+
+            AButton(title: "Изменить") {
+
+            }
+            .shadow(color: .black.opacity(0.05), radius: 50, y: 26)
+        }
+    }
 }
 
 #Preview {

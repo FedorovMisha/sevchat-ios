@@ -31,15 +31,13 @@ public struct MainView: View {
     private var tabIndex = 0
 
     public var body: some View {
-        VStack {
+        VStack(spacing: .zero) {
             TabView(selection: $tabIndex) {
-                Color.white
-                    .overlay {
-                        Text("Empty")
-                    }
+                UserListView()
+                    .toolbar(.hidden, for: .tabBar)
                     .tag(0)
 
-                Color.white
+                Color.pink
                     .overlay {
                         Text("Empty")
                     }
@@ -86,14 +84,14 @@ private struct TabBar: View {
             TabBarItem(Image.settings, index: 2)
         }
         .frame(maxWidth: .infinity)
-        .padding(.horizontal, 33)
+        .padding(.horizontal, 58)
     }
 
     private var selectionFlag: some View {
         RoundedRectangle(cornerRadius: 100)
             .fill(itemGradient)
             .frame(width: 26.0, height: 2)
-            .shadow(color: .red, radius: 100)
+            .shadow(color: .TabBar.flagShadow, radius: 10)
     }
 
     private var itemGradient: LinearGradient {

@@ -7,6 +7,7 @@ import Moya
 
 public enum UserService {
     case me
+    case all
 }
 
 extension AccessTokenAuthorizable {
@@ -18,7 +19,12 @@ extension AccessTokenAuthorizable {
 extension UserService: NetTarget, AccessTokenAuthorizable {
 
     public var path: String {
-        "/auth/me"
+        switch self {
+        case .me:
+            "/auth/me"
+        case .all:
+            "/users/all"
+        }
     }
     
     public var method: Moya.Method {
