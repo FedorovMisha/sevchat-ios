@@ -68,6 +68,10 @@ public struct AInput: View {
                 .padding(.vertical, 14.0)
                 .focused($isFocused)
         }
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .fill(.white)
+        )
         .background {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(

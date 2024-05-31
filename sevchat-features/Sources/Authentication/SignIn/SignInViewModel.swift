@@ -2,6 +2,8 @@
 //  Created by frvmi on 2024.
 //  Copyright © 2024 SevChatIS. All rights reserved.
     
+import NetSpark
+import APIModelKit
 import SwiftUI
 
 final class SignInViewModel: ObservableObject {
@@ -32,7 +34,20 @@ final class SignInViewModel: ObservableObject {
     }
 
     public func onSignInTap() {
-        // TODO: отправить запрос на сервер
-        // Обновить данные в auth manager
+        let model = SignInRequestModel(username: email, password: password)
+        BaseRequest(NetAuthService.signIn(model)) { (result: Result<SignInResponse, Error>) in
+            switch result {
+            case .success(let success):
+                self.saveData(success)
+            case .failure(let failure):
+                self.error = "\(failure)"
+            }
+        }
+    }
+
+    public func saveData(_ data: SignInResponse) {
+        AuthStore.shared.store(value: data.accessToken, forKey: "access.token")
+        AuthStore.shared.store(value: data.accessToken, forKey: "refresh.token")
+        ApplicationStore.shared.forceUpdateSubviews()
     }
 }

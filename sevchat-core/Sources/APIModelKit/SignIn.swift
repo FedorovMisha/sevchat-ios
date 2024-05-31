@@ -26,6 +26,8 @@ public struct SignInResponse: Decodable {
         case refreshToken
     }
 
+    public let user: User
+
     public let accessToken: String
     public let refreshToken: String
 
@@ -35,6 +37,8 @@ public struct SignInResponse: Decodable {
             keyedBy: BackendTokenCodingKeys.self,
             forKey: .backendTokens
         )
+
+        self.user = try outer.decode(User.self, forKey: .user)
 
         accessToken = try container.decode(
             String.self,
@@ -46,4 +50,9 @@ public struct SignInResponse: Decodable {
             forKey: .refreshToken
         )
     }
+}
+
+public struct RefreshTokenResponse: Decodable {
+    public let accessToken: String
+    public let refreshToken: String
 }
