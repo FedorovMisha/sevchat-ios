@@ -3,6 +3,7 @@
 //  Copyright © 2024 SevChatIS. All rights reserved.
     
 import Aesthetic
+import APIModelKit
 import Authentication
 import SwiftUI
 import NetSpark
@@ -37,13 +38,11 @@ public struct MainView: View {
                     .toolbar(.hidden, for: .tabBar)
                     .tag(0)
 
-                Color.pink
-                    .overlay {
-                        Text("Empty")
-                    }
+                ChatListView()
+                    .toolbar(.hidden, for: .tabBar)
                     .tag(1)
 
-                UserProfileView()
+                PersonalProfileView()
                     .toolbar(.hidden, for: .tabBar)
                     .tag(2)
             }
@@ -55,6 +54,7 @@ public struct MainView: View {
 
     public init() { }
 }
+
 
 private struct TabBar: View {
 
@@ -128,15 +128,13 @@ private struct TabBar: View {
     }
 }
 
-private struct TabBarHidden: EnvironmentKey {
-    static let defaultValue = false
-}
+public final class TabBarOptions: ObservableObject {
 
-extension EnvironmentValues {
-    var tabBarHidden: Bool {
-        get { self[TabBarHidden.self] }
-        set { self[TabBarHidden.self] = newValue }
-    }
+    @Published
+    public var hideTabBar: Bool = false
+
+    @Published
+    public var tabIndex = 0
 }
 
 #Preview {

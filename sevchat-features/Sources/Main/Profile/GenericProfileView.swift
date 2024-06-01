@@ -24,10 +24,7 @@ public struct GenericProfileView<BottomContent: View>: View {
     public var body: some View {
         VStack {
             LinearGradient(
-                stops: [
-                    .init(color: .ProfileGradient.c1, location: 0.39),
-                    .init(color: .ProfileGradient.c2, location: 0.98)
-                ],
+                gradient: gradient,
                 startPoint: .top,
                 endPoint: .bottom
             )
@@ -35,13 +32,13 @@ public struct GenericProfileView<BottomContent: View>: View {
             .overlay(alignment: .center) {
                 userInfo
             }
+            .frame(maxHeight: .infinity)
 
             content()
                 .padding(.horizontal, 16)
                 .padding(.bottom, 29)
                 .padding(.top, -26)
         }
-        .ignoresSafeArea(edges: .top)
     }
 
     private var userInfo: some View {

@@ -48,6 +48,7 @@ final class SignInViewModel: ObservableObject {
     public func saveData(_ data: SignInResponse) {
         AuthStore.shared.store(value: data.accessToken, forKey: "access.token")
         AuthStore.shared.store(value: data.refreshToken, forKey: "refresh.token")
+        AuthStore.shared.store(value: data.user.id, forKey: "userId.token")
         ApplicationStore.shared.forceUpdateSubviews()
     }
 }

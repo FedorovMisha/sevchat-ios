@@ -24,6 +24,7 @@ public struct AInput: View {
     private let type: InputType
     private let isEditable: Bool
     private let error: String?
+    private let axis: Axis
 
     public var body: some View {
         VStack {
@@ -38,7 +39,8 @@ public struct AInput: View {
         case .text:
             TextField(
                 "",
-                text: $value
+                text: $value,
+                axis: axis
             )
 
         case .secure:
@@ -101,6 +103,7 @@ public struct AInput: View {
         placeholder: String? = nil,
         type: InputType = .text,
         error: String? = nil,
+        axis: Axis = .horizontal,
         isEditable: Bool = true
     ) {
         self._value = value
@@ -109,6 +112,7 @@ public struct AInput: View {
         self.type = type
         self.right = right
         self.error = error
+        self.axis = axis
         self.isEditable = isEditable
     }
 }
