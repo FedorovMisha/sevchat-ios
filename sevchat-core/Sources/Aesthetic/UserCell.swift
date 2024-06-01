@@ -25,6 +25,7 @@ public struct UserCell: View {
             VStack(alignment: .leading) {
                 Text(username)
                     .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(Color.cText)
 
                 Text("В сети")
                     .font(.system(size: 12))

@@ -12,6 +12,10 @@ public final class ApplicationStore: ObservableObject {
     @Published
     public var activeUser: User?
 
+    public var userId: String? {
+        AuthStore.shared.get(forKey: "userId.token", type: String.self)
+    }
+
     public var accessToken: String? {
         AuthStore.shared.get(forKey: "access.token", type: String.self)
     }
@@ -31,6 +35,7 @@ public final class ApplicationStore: ObservableObject {
     public func logout() {
         AuthStore.shared.remove(forKey: "access.token")
         AuthStore.shared.remove(forKey: "refresh.token")
+        AuthStore.shared.remove(forKey: "userId.token")
         activeUser = nil
     }
 }

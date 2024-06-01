@@ -79,7 +79,13 @@ public func ApplicationRequest<Target: TargetType, Response: Decodable>(
                 completion(.failure(failError))
             }
         case let .success(response):
-            let value = try? response.map(Response.self)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
+            let value = try? response.map(Response.self, using: decoder)
             guard let value else {
                 completion(.failure(ProviderError.jsonMapError))
                 return

@@ -2,120 +2,147 @@
 //  Created by mishafedorov on 2024.
 //  Copyright © 2024 SevChatIS. All rights reserved.
     
-
 import Aesthetic
-import SwiftUI
-import NetSpark
 import APIModelKit
-import Combine
+import NetSpark
+import Foundation
+import SwiftUI
 
 public final class UserProfileViewModel: ObservableObject {
-    
+
     @Published
-    var user: User?
+    public var user: User
 
-    private var bag = Set<AnyCancellable>()
+    @Published
+    public var chatModel: ChatModel?
 
-    public init() {
-        ApplicationStore.shared.$activeUser
-            .sink { user in
-                self.user = user
-            }
-            .store(in: &bag)
+    public init(user: User) {
+        self.user = user
     }
 
-    public func loaderUserIfNeeded() {
-        ApplicationRequest(UserService.me) { (result: Result<User, Error>) in
+    public func writeToUser() {
+        ApplicationRequest(ChatService.getOrCreate(user.id)) { (result: Result<ChatModel, Error>) in
             switch result {
-            case .success(let user):
-                ApplicationStore.shared.activeUser = user
+            case .success(let model):
+                self.chatModel = model
             case .failure(let failure):
                 print(failure)
             }
         }
     }
-
-    func logout() {
-        ApplicationStore.shared.logout()
-    }
 }
 
-public struct UserProfileView: View {
+struct UserProfileView: View {
 
     @StateObject
-    private var vm = UserProfileViewModel()
+    private var viewModel: UserProfileViewModel
 
-    public var body: some View {
-        if let user = vm.user {
-            contentView(user)
-        } else {
-            ProgressView()
-                .progressViewStyle(.circular)
-                .onAppear {
-                    vm.loaderUserIfNeeded()
-                }
-        }
-    }
+    @Environment(\.dismiss)
+    private var dismiss
 
-    private func contentView(_ user: User) -> some View {
-        NavigationStack {
-            ProfileView(user)
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        LogoutButton {
-                            vm.logout()
-                        }
-                    }
-                }
-        }
-    }
-    
-    private func ProfileView(_ user: User) -> some View {
+    @State
+    private var presentChat = false
+
+    var body: some View {
         GenericProfileView(
-            userName: user.fullName,
-            status: "В сети"
+            userName: viewModel.user.fullName,
+            status: "В сети",
+            gradient: gradient
         ) {
-            editableContent(user)
+            contentView
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Image.back
+                    .onTapGesture {
+                        dismiss()
+                    }
+            }
         }
     }
 
-    private func editableContent(_ user: User) -> some View {
+    private var gradient: Gradient {
+        Gradient(
+            stops: [
+                .init(color: .Gradient.c2, location: 0.39),
+                .init(color: .Gradient.c3, location: 0.98)
+            ]
+        )
+    }
+
+    private var contentView: some View {
         VStack(spacing: 8) {
             AInput(
-                value: .constant(user.fullName),
+                value: .constant(viewModel.user.fullName),
                 icon: .profile,
                 right: AnyView(
                     Image.solarCopyOutline
                         .onTapGesture {
-                            UIPasteboard.general.string = user.fullName
+                            UIPasteboard.general.string = viewModel.user.fullName
                         }
                 ),
                 isEditable: false
             )
 
             AInput(
-                value: .constant(user.email),
+                value: .constant(viewModel.user.email),
                 icon: .mail,
                 right: AnyView(
                     Image.solarCopyOutline
                         .onTapGesture {
-                            UIPasteboard.general.string = user.fullName
+                            UIPasteboard.general.string = viewModel.user.fullName
                         }
                 ),
                 isEditable: false
             )
+            .padding(.bottom, 28.0)
 
-            AButton(title: "Изменить") {
-
+            Button {
+                viewModel.writeToUser()
+            } label: {
+                Label {
+                    Text("Написать")
+                        .foregroundStyle(.white)
+                        .padding(.vertical, 17.0)
+                } icon: {
+                    Image.write
+                }
+                .frame(maxWidth: .infinity)
+                .background(
+                    LinearGradient(
+                        colors: [.Gradient.c1, .Gradient.c2],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             }
             .shadow(color: .black.opacity(0.05), radius: 50, y: 26)
         }
+        .onChange(of: viewModel.chatModel) {
+            guard $0 != nil else {
+                return
+            }
+
+            presentChat = true
+        }
+        .fullScreenCover(item: $viewModel.chatModel) { chatModel in
+            NavigationStack {
+                ChatView(chat: chatModel)
+                    .transition(.move(edge: .leading))
+            }
+        }
+    }
+
+    public init(_ user: User) {
+        self._viewModel = StateObject(
+            wrappedValue: UserProfileViewModel(user: user)
+        )
     }
 }
 
 #Preview {
-    TabView {
-        UserProfileView()
-    }
-    .tabViewStyle(PageTabViewStyle())
+    UserProfileView(User.mock)
+        .environmentObject(TabBarOptions())
 }
