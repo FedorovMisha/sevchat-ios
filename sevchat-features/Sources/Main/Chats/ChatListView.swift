@@ -99,7 +99,7 @@ public struct ChatCell: View {
 
             VStack(alignment: .leading) {
                 Text(companion.username)
-                    .font(.system(size: 16, weight: .semibold))
+                    .font(.system(size: 16, weight: .regular))
                     .foregroundStyle(Color.cText)
                     .padding(.bottom, 4.0)
 
@@ -110,7 +110,7 @@ public struct ChatCell: View {
                         .foregroundStyle(Color.kText)
                 }
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, alignment: .leading)
 
             VStack {
                 if let message = chat.chatMessages.last {
@@ -125,7 +125,7 @@ public struct ChatCell: View {
 
         }
         .padding(.horizontal, 16.0)
-        .padding(.vertical, 10.0)
+        .padding(.vertical, 16.0)
     }
 
     private var background: some View {
