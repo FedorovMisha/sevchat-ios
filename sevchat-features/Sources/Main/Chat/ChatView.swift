@@ -85,15 +85,30 @@ public struct ChatView: View {
             }
             .toolbarBackground(Color.white, for: .navigationBar)
             .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Image.chatIS
-                }
-
                 ToolbarItem(placement: .topBarLeading) {
-                    Image.cBack
-                        .onTapGesture {
-                            dismiss()
+                    HStack {
+                        Image.cBack
+                            .onTapGesture {
+                                dismiss()
+                            }
+                        let p = viewModel.companionName?.first
+                        Text(p.map { String($0)} ?? "")
+                            .font(.system(size: 16))
+                            .foregroundStyle(.white)
+                            .background {
+                                Circle()
+                                    .fill(Color.c1)
+                                    .frame(width: 31, height: 31)
+                            }
+                            .padding(.trailing, 12)
+
+                        VStack {
+                            Text(viewModel.companionName ?? "")
+                                .foregroundStyle(Color.cText)
+                                .font(.system(size: 14))
                         }
+
+                    }
                 }
 
                 ToolbarItem(placement: .topBarTrailing) {
